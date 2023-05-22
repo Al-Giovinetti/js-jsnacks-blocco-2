@@ -4,31 +4,27 @@
 
 //Genero un numero random
  let pcRandom = parseInt(Math.floor(Math.random()*( 100 + 1)))
- console.log(pcRandom)
+ //console.log(pcRandom +"numero computer")
 
 // Creo un contatore
 let contatore = 0
-
-let myNumber = parseInt(prompt("Inserisci un numero da 1 a 100"))
 
 let indovinato = false
 //Vai avanti finchè indovinato rimane folse
 while(indovinato == false) {
 
-    console.log(pcRandom)
+    let myNumber = parseInt(prompt("Inserisci un numero da 1 a 100"))
     console.log(myNumber)
-    console.log(indovinato)
 
     if(myNumber == pcRandom){
-        console.log=("hai indovinato")
+        console.log("hai indovinato")
         indovinato = true
     }else if(myNumber > pcRandom){
-        console.log=("piu piccolo")
-        contatore = contatore +1
+        console.log("piu piccolo")
     }else{
-        console.log=("più grande")
-        contatore = contatore +1
+        console.log("più grande")
     }
+    contatore = contatore + 1
 }
 
 console.log("Per indovinare c hai messo "+ contatore +" volte")

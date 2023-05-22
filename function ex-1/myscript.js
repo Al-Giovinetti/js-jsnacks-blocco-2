@@ -23,4 +23,4 @@ function stessalunghezza(parolaA,parolaB){
     }
 }
 /*Il risulato della funzione viene sostituita a quando viene invocata
-riga 5 stessalunghezza(parolaUno,parolaDue)== true o false 
+riga 5 stessalunghezza(parolaUno,parolaDue)== true o false */
