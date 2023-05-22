@@ -3,34 +3,35 @@
 //Una volta che ha indovinato, stampiamo in console il numero di tentativi totali.
 
 //Genero un numero random
- const pcRandom = parseInt(Math.floor(Math.random()*( 100 + 1)))
+ let pcRandom = parseInt(Math.floor(Math.random()*( 100 + 1)))
  console.log(pcRandom)
 
 // Creo un contatore
 let contatore = 0
 
-let indovinato = false
-//Vai avanti finchè indovinato è = true
-while(indovinato = true) {
+let myNumber = parseInt(prompt("Inserisci un numero da 1 a 100"))
 
-    let myNumber = parseInt(prompt("Inserisci un numero da 1 a 100"))
+let indovinato = false
+//Vai avanti finchè indovinato rimane folse
+while(indovinato == false) {
+
     console.log(pcRandom)
     console.log(myNumber)
     console.log(indovinato)
 
-    if( myNumber == pcRandom){
+    if(myNumber == pcRandom){
         console.log=("hai indovinato")
-        indovinato=false
+        indovinato = true
     }else if(myNumber > pcRandom){
         console.log=("piu piccolo")
-        contatore=contatore +1
+        contatore = contatore +1
     }else{
         console.log=("più grande")
-        contatore=contatore +1
+        contatore = contatore +1
     }
 }
 
-console.log(contatore)
+console.log("Per indovinare c hai messo "+ contatore +" volte")
 
 
     

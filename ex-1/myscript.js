@@ -9,5 +9,11 @@ while(sum < 50){
     arreyList.push(userNumber);
     sum = sum + parseInt(userNumber)
     console.log(arreyList)
+    if(sum == 50 ){
+        console.log("sei arrivato preciso a 50, basta")
+    }else if(sum > 50){
+        console.log("La somma della lista ha sorpassato 50, non puoi aggiungere altro")
+    }
+
 }
 
