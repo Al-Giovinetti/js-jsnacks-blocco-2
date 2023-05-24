@@ -4,12 +4,14 @@ const btnCalc = document.querySelector("button")
 
 let sum = 0
 btnCalc.addEventListener("click",function(){
+    let userNumber;
     for( let i = 0; i < 10; i++){
-        let userNumber = parseInt(userInput.value)
-        sum = userNumber + sum
+        userNumber = userInput.value
+        sum = sum + userNumber
         console.log(userNumber)
+        userNumber= ""
     }
+    const media = (sum / 10).toFixed(2)
+    console.log(media)
 }
 );
-const media = sum / 10
-console.log(media)
