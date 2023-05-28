@@ -14,7 +14,6 @@ let premuto=false
             listaIngredienti.appendChild(ingrediente)
             boxingrediente.value=" "
             contatore=contatore+1
-            console.log(contatore)
         }
     })
     btnPiatto.addEventListener("click",function(){
