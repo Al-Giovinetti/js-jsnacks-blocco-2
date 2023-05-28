@@ -9,25 +9,43 @@
 // Creo un contatore
 let contatore = 0
 
-let indovinato = false
-//Vai avanti finchè indovinato rimane folse
-while(indovinato == false) {
+const pcNumber = Math.floor(Math.random()*(100-1+1)-1)
+console.log(pcNumber)
 
-    let myNumber = parseInt(prompt("Inserisci un numero da 1 a 100"))
-    console.log(myNumber)
+let trovato = false
+while(trovato==false){
+    let userNumber = prompt("dammi un numero")
+    let difference ;
 
-    if(myNumber == pcRandom){
-        console.log("hai indovinato")
-        indovinato = true
-    }else if(myNumber > pcRandom){
-        console.log("piu piccolo")
+    if (userNumber>=pcNumber){
+        difference = userNumber - pcNumber
     }else{
-        console.log("più grande")
+        difference = pcNumber - userNumber
     }
-    contatore = contatore + 1
-}
 
-console.log("Per indovinare c hai messo "+ contatore +" volte")
+    let status;
+    if(difference < 10){
+        status = "fuoco"
+    }else if( difference < 20){
+        status = "fuochino"
+    }else{
+        status = "acqua"
+    }
+
+    if(pcNumber == userNumber){
+        console.log(userNumber + " numero indovinato")
+        trovato = true
+    }else if(userNumber > pcNumber){
+        console.log(status)
+        console.log(userNumber + " Il numero da indovinare è più piccolo")
+        contatore=contatore+1
+    }else{
+        console.log(userNumber + " Il numero da indovinare è più grande")
+        console.log(status)
+        contatore=contatore+1
+    }
+}
+console.log("per indovinare ci sono voluti "+ contatore + "tentativi")
 
 
     
