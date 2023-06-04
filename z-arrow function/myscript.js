@@ -1,26 +1,50 @@
-carlist = []
+const carList = []
 
-for ( let i = 0; i < 15; i++){
-    let car = carlist[i]
-    car = {
-        marca: "fiat",
-        modello: "cabrio",
-        alimentazione:"benzina",
+for(let i = 0; i < 14; i++){
+    carList[i] = 
+    {
+        marca: random3String("alfa","fiat","audi"),
+        modello: random3String("utilitaria","coupe","station wagon"),
+        alimentazione: random3String("benzina","disel","elettrica")
     }
-    carlist.push(car)
+    carList.push(carList[i]);
 }
+console.log(carList)
 
-console.log(carlist)
-
-for(let i = 0; i < carlist.length;i++){
-
-    const car = carlist[i]
-    if(car.alimentazione == benzina){
-        benzina.push(car)
+const benzina = []
+for(let i = 0; i < carList.length; i++){
+    if(carList[i].alimentazione == "benzina"){
+        benzina.push(carList[i])
     }
 }
 console.log(benzina)
 
-carlist.forEach(x => {
-    console.log   
-});
+const disel = []
+
+carList.forEach((car,index) =>{
+    if(car.alimentazione == "disel"){
+        disel.push(car)
+    }
+})
+console.log(disel)
+
+const noDiselBenzina = carList.filter((car) => {
+    if((car.alimentazione != "disel") && (car.alimentazione != "benzina")){
+        return true
+    }
+    return false
+})
+console.log(noDiselBenzina)
+
+//function//
+
+function random3String(string1,string2,string3){
+    const randomNumber = Math.floor(Math.random() * (3 - 1 + 1) + 1);
+    if(randomNumber == 3){
+        return string1
+    }else if( randomNumber == 2){
+        return string2
+    }else{
+        return string3
+    }
+};
