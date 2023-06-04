@@ -1,22 +1,31 @@
-const giocatore = {
-    "cod giocatore":getUppercase() + Math.floor(Math.random()*(11)) + Math.floor(Math.random()*(11)) + Math.floor(Math.random()*(11)),
-    nome: "Alino",
-    età: "41",
-    "media punti p/p" :Math.floor(Math.random()*(51)) ,
-    "% successo tiri 3 punti": Math.floor(Math.random()*(101)) ,
-    stoppate: Math.floor(Math.random()*(30)) ,
-    tiri: Math.floor(Math.random()*(100 - 20 +1)-20) ,
+const player ={
+    cod:getRandomLetters(3).toUpperCase() + randomNumber(9,1) + randomNumber(9,1) + randomNumber (9,1),
+    name:"Pippo",
+    surname:"Cognome",
+    age:39,
+    "media punti p/p":randomNumber(50,0),
+    "% punti da 3":randomNumber(100,0),
+    stoppate:randomNumber(30,0),
+    tiri:randomNumber(100,20)
 }
 
-console.log(giocatore)
-
-function getUppercase(){
-    const uppercases = "ABCDEFGHILMNOPQRSTUVZ"
-    let uppercase;
-    while (uppercase.length == 3){
-        for(let i=0; i<uppercases.length;i++){
-        uppercase= uppercases.charAt(i)
-        }
-        return uppercase
-    } 
+for(let key in player){
+    console.log(player[key])
 }
+
+function getRandomLetters(howManyLetters){
+    const alphabet = "abcdefghilmnopqrstuvz"
+    let result =""
+    while(result.length < howManyLetters){
+        const random = Math.floor(Math.random() * (alphabet.length - 1 + 1) + 1);
+        result = result +  alphabet.charAt(random)
+    }
+    return result
+}
+
+function randomNumber(max,min){
+    const random = Math.floor(Math.random() * (max - min + 1) + min); 
+    return random
+}
+
+
