@@ -4,10 +4,12 @@ const arreyList = [];
 
 let sum=0;
 
-while(sum < 50){
+while(sum <= 49){
    let userNumber = parseInt(prompt("dammi un numero"));
    if(sum+userNumber >= 50){
         console.log("serve un numero più piccolo - 49 superato")
+   }else if(sum+userNumber==49){
+      console.log("49, sei arrivato")
    }else{
     sum = sum + userNumber
     arreyList.push(userNumber)
