@@ -39,3 +39,6 @@ function getRandomInt(minumNumber, maximumNumber){
 
     return randomNumber;
 }
+
+const randomlist = getRandomUniqueNumber(1,100,10);
+console.log(randomlist)

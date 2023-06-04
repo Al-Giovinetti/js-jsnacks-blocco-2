@@ -14,7 +14,7 @@ const ulElement = document.querySelector("ul")
 
 for(let i = 0; i < 10; i++){
     const liElement = getNewElement("li")
-    liElement.innerHTML=i + " ciaoooo"
+    liElement.innerHTML =i + " ciaoooo"
     ulElement.append(liElement)
 }
 
